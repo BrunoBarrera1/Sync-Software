@@ -1,0 +1,187 @@
+/* ===== VERTICAL PROCESS TIMELINE ===== */
+
+.process-vertical-timeline {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+/* Cada paso */
+.process-step-vertical {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Wrapper del ícono y conector */
+.step-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Ícono SVG */
+.step-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-2);
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 71, 171, 0.3);
+    transition: all 0.3s ease;
+}
+
+.step-icon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(0, 71, 171, 0.5);
+}
+
+.step-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--primary);
+    filter: drop-shadow(0 0 4px rgba(0, 163, 255, 0.6));
+}
+
+/* Conector vertical */
+.step-connector {
+    display: none;
+}
+
+/* Contenido del paso */
+.step-content {
+    flex: 1;
+    padding-top: 8px;
+}
+
+.step-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.step-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.step-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.step-duration {
+    font-size: 14px;
+    color: var(--text-2);
+    font-weight: 600;
+}
+
+.step-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    font-size: 12px;
+    color: #10B981;
+    font-weight: 700;
+}
+
+.step-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-2);
+}
+
+/* Línea divisoria tipo cuaderno */
+.step-divider {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary) 10%, 
+        var(--primary) 90%, 
+        transparent 100%);
+    margin: 0 0 0 96px;
+    position: relative;
+    opacity: 0.3;
+}
+
+.step-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 8px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .process-step-vertical {
+        gap: 20px;
+        padding: 32px 0;
+    }
+
+    .step-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .step-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .step-connector {
+        height: 60px;
+    }
+
+    .step-title {
+        font-size: 22px;
+    }
+
+    .step-description {
+        font-size: 15px;
+    }
+
+    .step-divider {
+        margin-left: 76px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-step-vertical {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px 0;
+    }
+
+    .step-icon-wrapper {
+        align-self: flex-start;
+    }
+
+    .step-connector {
+        display: none;
+    }
+
+    .step-divider {
+        margin-left: 0;
+        margin-top: 24px;
+    }
+}

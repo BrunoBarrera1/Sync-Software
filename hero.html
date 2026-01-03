@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero - Sync Software</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+</head>
+<body>
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
+        <a href="index.html" class="logo-mobile">
+            <div class="logo-icon-mobile">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white"/>
+                </svg>
+            </div>
+            <span class="logo-text-mobile">SYNC</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <div class="menu-header-title">Navegación</div>
+            <div class="menu-header-subtitle">Explorá nuestros servicios</div>
+        </div>
+
+        <div class="menu-nav">
+            <ul class="menu-nav-list">
+                <li class="menu-nav-item">
+                    <a href="index.html" class="menu-nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="proceso.html" class="menu-nav-link">
+                        <span>Proceso</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="pricing.html" class="menu-nav-link">
+                        <span>Pricing</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="faq.html" class="menu-nav-link">
+                        <span>FAQ</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-footer">
+            <a href="contacto.html" class="menu-cta">
+                <span>Solicitar Propuesta</span>
+            </a>
+            <div class="menu-info">
+                <p class="menu-info-text">Montevideo, Uruguay</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAVBAR DESKTOP -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="proceso.html">Proceso</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li>
+                    <a href="contacto.html" class="nav-cta">
+                        <span>Contacto</span>
+                        <div class="nav-cta-shimmer"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Desarrollo Web<br>
+                    <span class="highlight">Premium en Uruguay</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Creamos experiencias digitales que convierten visitantes en clientes. 
+                    Desde landing pages hasta aplicaciones enterprise con tecnología de vanguardia.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="contacto.html" class="btn-primary">
+                        Solicitar Propuesta
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </a>
+                    <a href="faq.html" class="btn-secondary">Ver FAQ</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Proyectos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfacción</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">&lt;24h</div>
+                        <div class="stat-label">Respuesta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name">SYNC SOFTWARE</span>
+                            <span class="logo-tagline">Web Development</span>
+                        </div>
+                    </a>
+                    <p>Desarrollo web premium desde Uruguay para el mundo.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="pricing.html">Landing Pages</a></li>
+                        <li><a href="pricing.html">Sitios Corporativos</a></li>
+                        <li><a href="pricing.html">Aplicaciones Web</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sync Software. Hecho con 💙 en Uruguay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
