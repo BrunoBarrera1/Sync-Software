@@ -3,7 +3,7 @@
 // ===== CONFIGURACIÓN =====
 const CONFIG = {
     // API Key de Google AI Studio
-    API_KEY: 'AIzaSyDB_ld6V7hZvenMav5-V1K1VYZsdITFtn0',
+    API_KEY: 'AIzaSyC-n3FPPTW1XDGHOk6q0YBlD9VHsbt4-QE',
     API_URL: 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent',
     
     // Configuración de reintentos

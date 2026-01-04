@@ -55,6 +55,11 @@
                     </a>
                 </li>
                 <li class="menu-nav-item">
+                    <a href="nosotros.html" class="menu-nav-link">
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
                     <a href="faq.html" class="menu-nav-link">
                         <span>FAQ</span>
                     </a>
@@ -80,6 +85,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="proceso.html">Proceso</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li>
                     <a href="contacto.html" class="nav-cta">
@@ -308,6 +314,13 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
+                        <img src="Sync_azul-removebg-preview.png" alt="Sync Software" style="width: 200px; height: auto; margin-bottom: 16px;">
+                    </a>
+                    <p>Desarrollo web premium desde Uruguay para el mundo.</p>
+                </div>
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
                         <div class="logo-icon">
                             <svg viewBox="0 0 24 24">
                                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -348,5 +361,21 @@
     <script src="js/scripts.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/mobile-menu.js"></script>
+    <script>
+        // Precargar mensaje del carrito si existe
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkoutMessage = localStorage.getItem('syncCheckoutMessage');
+            if (checkoutMessage) {
+                const messageTextarea = document.getElementById('message');
+                if (messageTextarea) {
+                    messageTextarea.value = checkoutMessage + '\n\nPor favor, envíenme una propuesta detallada para este proyecto.';
+                    // Clear the stored message
+                    localStorage.removeItem('syncCheckoutMessage');
+                    // Scroll to form
+                    messageTextarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

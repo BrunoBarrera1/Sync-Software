@@ -15,9 +15,9 @@ if (navbar) {
 
 // Active link on current page
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+const navMenuLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
 
-navLinks.forEach(link => {
+navMenuLinks.forEach(link => {
     const linkPage = link.getAttribute('href');
     if (linkPage === currentPage) {
         link.classList.add('active');

@@ -8,9 +8,10 @@
 .bento-pricing-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
+    gap: 32px;
     max-width: 1400px;
     margin: 60px auto 0;
+    padding: 0 20px;
 }
 
 /* ===== PLAN CARDS ===== */
@@ -26,6 +27,7 @@
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(20px);
+    min-height: 650px;
 }
 
 .bento-plan::before {
@@ -259,7 +261,7 @@
 }
 
 .bento-feature.tutorials {
-    grid-column: span 6;
+    grid-column: span 12;
     background: linear-gradient(135deg, rgba(0, 71, 171, 0.08), rgba(0, 163, 255, 0.05));
     border-color: rgba(0, 71, 171, 0.3);
 }
@@ -404,11 +406,6 @@
     background: rgba(15, 15, 15, 0.8);
 }
 
-.bento-hosting.professional {
-    border-color: rgba(0, 71, 171, 0.5);
-    background: rgba(0, 71, 171, 0.05);
-}
-
 .hosting-badge {
     display: inline-block;
     background: rgba(255, 255, 255, 0.05);
@@ -489,6 +486,11 @@
     flex-shrink: 0;
 }
 
+/* Hosting CTA Buttons */
+.bento-hosting .plan-cta {
+    margin-top: auto;
+}
+
 /* ===== EXTRAS SECTION ===== */
 .extras-section-header {
     grid-column: span 12;
@@ -516,14 +518,16 @@
     background: rgba(15, 15, 15, 0.6);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 24px;
+    padding: 28px;
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    gap: 20px;
     grid-column: span 3;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    min-width: 0;
+    min-height: 220px;
 }
 
 .bento-extra::before {
@@ -549,6 +553,8 @@
     grid-column: span 6;
     background: linear-gradient(135deg, rgba(0, 71, 171, 0.08), rgba(0, 163, 255, 0.05));
     border-color: rgba(0, 71, 171, 0.4);
+    flex-direction: row;
+    align-items: center;
 }
 
 .bento-extra.featured .extra-price {
@@ -559,8 +565,8 @@
 }
 
 .extra-icon {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     background: linear-gradient(135deg, rgba(0, 71, 171, 0.15), rgba(0, 163, 255, 0.1));
     border: 1px solid rgba(0, 71, 171, 0.3);
     border-radius: 12px;
@@ -569,6 +575,7 @@
     justify-content: center;
     flex-shrink: 0;
     transition: all 0.3s;
+    align-self: flex-start;
 }
 
 .bento-extra:hover .extra-icon {
@@ -581,28 +588,32 @@
 }
 
 .extra-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     stroke: var(--accent);
     transition: stroke 0.3s;
 }
 
 .extra-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .extra-content h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 4px;
+    margin-bottom: 0;
 }
 
 .extra-content p {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-2);
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0;
+    flex: 1;
 }
 
 .extra-price {
@@ -611,6 +622,9 @@
     color: var(--accent);
     flex-shrink: 0;
     letter-spacing: -0.02em;
+    white-space: nowrap;
+    text-align: left;
+    margin-top: auto;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -626,21 +640,20 @@
     .bento-feature.design,
     .bento-feature.seo,
     .bento-feature.performance,
-    .bento-feature.support,
+    .bento-feature.support {
+        grid-column: span 6;
+    }
+
     .bento-feature.tutorials {
-        grid-column: span 6;
-    }
-
-    .bento-hosting {
-        grid-column: span 6;
-    }
-
-    .bento-hosting.professional {
         grid-column: span 12;
     }
 
+    .bento-hosting {
+        grid-column: span 4;
+    }
+
     .bento-extra {
-        grid-column: span 6;
+        grid-column: span 4;
     }
 
     .bento-extra.featured {
@@ -760,29 +773,41 @@
 
     .bento-extra {
         grid-column: span 12 !important;
-        padding: 20px;
+        padding: 24px;
+        flex-direction: row;
+        align-items: center;
+        min-height: auto;
     }
 
     .extra-icon {
-        width: 48px;
-        height: 48px;
+        width: 56px;
+        height: 56px;
     }
 
     .extra-icon svg {
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .extra-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
     }
 
     .extra-content h4 {
-        font-size: 15px;
+        font-size: 16px;
+        margin: 0;
     }
 
     .extra-content p {
-        font-size: 12px;
+        display: none;
     }
 
     .extra-price {
         font-size: 20px;
+        margin-top: 0;
+        text-align: right;
     }
 
     .bento-extra.featured .extra-price {

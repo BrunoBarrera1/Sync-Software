@@ -1,40 +1,44 @@
 // Header scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    header.classList.toggle('scrolled', window.scrollY > 50);
-});
+const header = document.querySelector('.header');
+if (header) {
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+}
 
 // Mobile menu
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const mobileOverlay = document.querySelector('.mobile-menu-overlay');
 
-function toggleMobileMenu() {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    mobileOverlay.classList.toggle('active');
-    
-    // Prevenir scroll del body cuando el menú está abierto
-    if (navLinks.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
-    }
-}
-
-menuToggle.addEventListener('click', toggleMobileMenu);
-
-// Cerrar al hacer click en el overlay
-mobileOverlay.addEventListener('click', toggleMobileMenu);
-
-// Cerrar al hacer click en un link
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+if (menuToggle && navLinks && mobileOverlay) {
+    function toggleMobileMenu() {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        
+        // Prevenir scroll del body cuando el menú está abierto
         if (navLinks.classList.contains('active')) {
-            toggleMobileMenu();
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
         }
+    }
+
+    menuToggle.addEventListener('click', toggleMobileMenu);
+
+    // Cerrar al hacer click en el overlay
+    mobileOverlay.addEventListener('click', toggleMobileMenu);
+
+    // Cerrar al hacer click en un link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
     });
-});
+}
 
 // FAQ Accordion
 document.querySelectorAll('.faq-question').forEach(button => {
@@ -156,48 +160,50 @@ const autoAdvanceTimeline = () => {
 
 // ===== FORMULARIO DE CONTACTO =====
 const contactForm = document.getElementById('contact-form');
-const formInputs = contactForm.querySelectorAll('.form-input, .form-select, .form-textarea');
 
-// Validación en tiempo real
-formInputs.forEach(input => {
-    input.addEventListener('blur', () => {
-        validateField(input);
-    });
-    
-    input.addEventListener('input', () => {
-        if (input.classList.contains('error')) {
+if (contactForm) {
+    const formInputs = contactForm.querySelectorAll('.form-input, .form-select, .form-textarea');
+
+    // Validación en tiempo real
+    formInputs.forEach(input => {
+        input.addEventListener('blur', () => {
             validateField(input);
-        }
+        });
+        
+        input.addEventListener('input', () => {
+            if (input.classList.contains('error')) {
+                validateField(input);
+            }
+        });
     });
-});
 
-function validateField(field) {
-    const value = field.value.trim();
-    let isValid = true;
-    
-    // Campo requerido
-    if (field.hasAttribute('required') && !value) {
-        isValid = false;
+    function validateField(field) {
+        const value = field.value.trim();
+        let isValid = true;
+        
+        // Campo requerido
+        if (field.hasAttribute('required') && !value) {
+            isValid = false;
+        }
+        
+        // Email
+        if (field.type === 'email' && value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            isValid = emailRegex.test(value);
+        }
+        
+        // Toggle error class
+        if (isValid) {
+            field.classList.remove('error');
+        } else {
+            field.classList.add('error');
+        }
+        
+        return isValid;
     }
-    
-    // Email
-    if (field.type === 'email' && value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        isValid = emailRegex.test(value);
-    }
-    
-    // Toggle error class
-    if (isValid) {
-        field.classList.remove('error');
-    } else {
-        field.classList.add('error');
-    }
-    
-    return isValid;
-}
 
-// Submit del formulario
-contactForm.addEventListener('submit', async (e) => {
+    // Submit del formulario
+    contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     // Validar todos los campos
@@ -237,16 +243,18 @@ contactForm.addEventListener('submit', async (e) => {
         
         // Mostrar mensaje de éxito
         const successMsg = contactForm.querySelector('.form-success-message');
-        successMsg.classList.add('show');
+        if (successMsg) {
+            successMsg.classList.add('show');
+            
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+        }
         
         // Limpiar formulario
         contactForm.reset();
         formInputs.forEach(input => input.classList.remove('error'));
-        
-        // Ocultar mensaje después de 5 segundos
-        setTimeout(() => {
-            successMsg.classList.remove('show');
-        }, 5000);
         
         // Log para desarrollo (eliminar en producción)
         console.log('Formulario enviado:', formData);
@@ -254,11 +262,13 @@ contactForm.addEventListener('submit', async (e) => {
     } catch (error) {
         // Mostrar mensaje de error
         const errorMsg = contactForm.querySelector('.form-error-message');
-        errorMsg.classList.add('show');
-        
-        setTimeout(() => {
-            errorMsg.classList.remove('show');
-        }, 5000);
+        if (errorMsg) {
+            errorMsg.classList.add('show');
+            
+            setTimeout(() => {
+                errorMsg.classList.remove('show');
+            }, 5000);
+        }
         
         console.error('Error:', error);
     } finally {
@@ -272,4 +282,5 @@ contactForm.addEventListener('submit', async (e) => {
             </svg>
         `;
     }
-});
+    });
+}

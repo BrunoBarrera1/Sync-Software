@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Sync Software</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+</head>
+<body>
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
+        <a href="index.html" class="logo-mobile">
+            <div class="logo-icon-mobile">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white"/>
+                </svg>
+            </div>
+            <span class="logo-text-mobile">SYNC</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- MOBILE MENU -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <div class="menu-header-title">Navegación</div>
+            <div class="menu-header-subtitle">Explorá nuestros servicios</div>
+        </div>
+
+        <div class="menu-nav">
+            <ul class="menu-nav-list">
+                <li class="menu-nav-item">
+                    <a href="index.html" class="menu-nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="proceso.html" class="menu-nav-link">
+                        <span>Proceso</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="pricing.html" class="menu-nav-link">
+                        <span>Pricing</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="nosotros.html" class="menu-nav-link">
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li class="menu-nav-item">
+                    <a href="faq.html" class="menu-nav-link">
+                        <span>FAQ</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-footer">
+            <a href="contacto.html" class="menu-cta">
+                <span>Solicitar Propuesta</span>
+            </a>
+            <div class="menu-info">
+                <p class="menu-info-text">Montevideo, Uruguay</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAVBAR DESKTOP -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="proceso.html">Proceso</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li>
+                    <a href="contacto.html" class="nav-cta">
+                        <span>Contacto</span>
+                        <div class="nav-cta-shimmer"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- NOSOTROS SECTION -->
+    <section class="nosotros" id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">QUIÉNES SOMOS</span>
+                <h2 class="section-title">La historia detrás de Sync Software</h2>
+            </div>
+
+            <div class="nosotros-content">
+                <div class="story-block">
+                    <p>Sync Software nació en enero de 2026 en Montevideo, de una conversación entre dos desarrolladores que compartían la misma frustración: veíamos demasiadas pequeñas empresas y emprendedores pagando fortunas por sitios web genéricos, o peor aún, conformándose con soluciones baratas que no les servían para crecer.</p>
+                    
+                    <p>Uno venía del mundo del diseño UI/UX, cansado de ver diseños arruinados por equipos que no entendían la importancia de los detalles. El otro del backend y arquitectura de sistemas, con ganas de aplicar tecnologías modernas en proyectos reales que hicieran diferencia.</p>
+                    
+                    <p>La idea era simple: <strong>¿Y si eliminábamos todo lo que hace que el desarrollo web sea frustrante?</strong></p>
+                    
+                    <p>Nada de cotizaciones vagas. Nada de equipos enormes donde nadie se hace responsable. Nada de clientes que pagan y luego quedan a oscuras durante semanas sin saber qué está pasando.</p>
+                </div>
+
+                <div class="story-block">
+                    <h3>Así que nos propusimos crear una empresa diferente:</h3>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Transparencia total desde el día 1</h4>
+                            <p>Presupuestos fijos, cronogramas claros, sin letra chica. Si decimos que cuesta X y toma Y semanas, es exactamente eso.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Trabajo directo con quien construye tu proyecto</h4>
+                            <p>No vendedores, no intermediarios. Hablás directamente con el equipo de desarrollo. Las mismas personas que diseñan, programan y entregan tu sitio.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Código de calidad que realmente te pertenece</h4>
+                            <p>Usamos tecnologías modernas (Python, FastAPI, React, PostgreSQL) y al terminar, el código es 100% tuyo. Sin dependencias forzadas, sin secuestros técnicos.</p>
+                        </div>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="value-content">
+                            <h4>Proceso ágil que te mantiene en el loop</h4>
+                            <p>Trabajamos en sprints de una semana con demos regulares. No esperás hasta el final para ver tu proyecto - lo ves crecer cada semana.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-block">
+                    <p>Desde entonces hemos trabajado con startups, empresas establecidas, y emprendedores que buscan dar el salto digital. Cada proyecto nos enseña algo nuevo, y cada cliente nos confirma que estábamos en lo correcto: la honestidad y la calidad nunca pasan de moda.</p>
+                    
+                    <p><strong>¿El resultado?</strong> Clientes que recomiendan, proyectos que funcionan, y la tranquilidad de saber que cada sitio que entregamos cumple exactamente lo que prometimos.</p>
+                </div>
+
+                <div class="nosotros-footer">
+                    <h3>Eso es Sync Software.</h3>
+                    <p class="tagline">Desarrollo web honesto, profesional, y diseñado para que tu negocio crezca.</p>
+                    <div class="company-info">
+                        <p><strong>Fundada en 2026 en Montevideo, Uruguay.</strong></p>
+                        <p class="subtitle">Tecnología moderna. Proceso transparente. Resultados reales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Sync_azul-removebg-preview.png" alt="Sync Software" style="width: 200px; height: auto;">
+                    </div>
+                    <p class="footer-desc">Desarrollo web premium en Uruguay</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="proceso.html">Proceso</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sync Software. Hecho con 💙 en Uruguay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
