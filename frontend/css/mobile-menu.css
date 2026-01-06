@@ -13,16 +13,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0 24px;
-    z-index: 1001;
+    z-index: 1003;
 }
 
 .logo-mobile {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
+    display: none;
 }
 
 .logo-icon-mobile {
@@ -164,8 +161,7 @@
 
 /* Header del menú */
 .menu-header {
-    padding: 32px 24px 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
 }
 
 .menu-header-title {
