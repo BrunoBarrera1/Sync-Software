@@ -1,0 +1,35 @@
+// src/app/layout.tsx
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Sync Software - Desarrollo Web Premium en Uruguay',
+  description: 'Creamos experiencias digitales que convierten visitantes en clientes. Desarrollo web profesional con React, Next.js y FastAPI.',
+  keywords: ['desarrollo web', 'uruguay', 'react', 'nextjs', 'fastapi', 'landing pages'],
+  authors: [{ name: 'Sync Software' }],
+  openGraph: {
+    title: 'Sync Software - Desarrollo Web Premium',
+    description: 'Desarrollo web profesional desde Uruguay para el mundo',
+    url: 'https://syncsoftware.com',
+    siteName: 'Sync Software',
+    locale: 'es_UY',
+    type: 'website',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="es">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
+}
