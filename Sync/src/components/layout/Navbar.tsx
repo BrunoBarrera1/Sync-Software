@@ -1,7 +1,7 @@
 // src/components/layout/Navbar.tsx
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
@@ -17,28 +17,13 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
     <>
       {/* Desktop Navbar */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-[#0F0F0F]/80 backdrop-blur-xl border-b border-white/10'
-            : 'bg-transparent'
-        }`}
-      >
+      <nav className="relative z-50 transition-all duration-300 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Mobile Menu Button - Left side */}
