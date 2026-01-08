@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Sync Software - Desarrollo Web Premium en Uruguay',
   description: 'Creamos experiencias digitales que convierten visitantes en clientes. Desarrollo web profesional con React, Next.js y FastAPI.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover',
   keywords: ['desarrollo web', 'uruguay', 'react', 'nextjs', 'fastapi', 'landing pages'],
   authors: [{ name: 'Sync Software' }],
   openGraph: {

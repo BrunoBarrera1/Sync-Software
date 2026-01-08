@@ -17,14 +17,14 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+        <div className="relative w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-20 md:py-32">
           <div className="text-center max-w-4xl mx-auto">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex justify-center mb-1 sm:mb-2"
+              className="flex justify-center mb-2 md:mb-4"
             >
               <Image
                 src="/Sync_azul-removebg-preview.png"
@@ -32,7 +32,7 @@ export default function Home() {
                 width={1400}
                 height={432}
                 priority
-                className="h-72 w-auto sm:h-80 drop-shadow-[0_10px_35px_rgba(37,99,235,0.35)]"
+                className="h-48 sm:h-64 md:h-72 lg:h-80 w-auto drop-shadow-[0_10px_35px_rgba(37,99,235,0.35)]"
               />
             </motion.div>
 
@@ -41,7 +41,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight"
             >
               Transformamos Ideas en{' '}
               <span className="block sm:inline text-gradient bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
@@ -54,7 +54,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-zinc-400 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4"
+              className="text-base md:text-lg lg:text-xl text-zinc-400 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed"
             >
               Desarrollo web profesional con tecnología de vanguardia.
               Desde landing pages hasta aplicaciones enterprise que impulsan tu negocio.
@@ -65,7 +65,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
             >
               <Link
                 href="/contacto"
@@ -87,7 +87,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="grid grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-white/10 px-4"
+              className="grid grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-16 pt-12 md:pt-16 border-t border-white/10"
             >
               {[
                 { number: '15+', label: 'Proyectos' },

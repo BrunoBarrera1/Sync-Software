@@ -107,7 +107,11 @@ export default function SyncSnake() {
             addMessage('¡Hola! Soy SyncSnake, tu asistente virtual. Puedo ayudarte con información sobre nuestros servicios, precios, tecnologías y más. ¿Qué te gustaría saber?', 'bot')
           }
         }}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-lg shadow-blue-500/50 flex items-center justify-center hover:scale-110 transition-transform z-50"
+        className="fixed w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-lg shadow-blue-500/50 flex items-center justify-center hover:scale-110 transition-transform z-50"
+        style={{
+          right: '20px',
+          bottom: 'calc(20px + env(safe-area-inset-bottom, 0px))',
+        }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -135,6 +139,10 @@ export default function SyncSnake() {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             className="fixed bottom-24 right-6 w-[400px] max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-8rem)] bg-[#0F0F0F] border border-white/10 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden"
+            style={{
+              right: '20px',
+              bottom: 'calc(90px + env(safe-area-inset-bottom, 0px))',
+            }}
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-4 flex items-center justify-between">

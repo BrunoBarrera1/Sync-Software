@@ -65,7 +65,7 @@ const item = {
 export default function Services() {
   return (
     <section className="relative py-32 bg-transparent" id="servicios">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.span
@@ -102,13 +102,13 @@ export default function Services() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center"
         >
           {services.map((service) => (
             <motion.div
               key={service.title}
               variants={item}
-              className={`relative group p-8 rounded-2xl border transition-all duration-300 ${
+              className={`relative group w-full max-w-xl p-8 rounded-2xl border transition-all duration-300 ${
                 service.featured
                   ? 'bg-gradient-to-b from-blue-500/10 to-transparent border-blue-500/30 hover:border-blue-500/50'
                   : 'bg-white/5 border-white/10 hover:border-white/20'
