@@ -79,7 +79,7 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <main className="min-h-screen bg-[#050505]">
+    <main className="min-h-screen">
       <Navbar />
 
       <section className="pt-32 pb-20">

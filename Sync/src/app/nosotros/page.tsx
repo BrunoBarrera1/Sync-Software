@@ -31,7 +31,7 @@ const values = [
 
 export default function NosotrosPage() {
   return (
-    <main className="min-h-screen bg-[#050505]">
+    <main className="min-h-screen">
       <Navbar />
 
       <section className="pt-32 pb-20">
