@@ -11,24 +11,24 @@ import Link from 'next/link'
 
 const sponsors = [
   {
-    id: 1,
-    name: 'La Estrega Rotisería',
-    category: 'Productos Artesanales',
-    description: 'Productos de granja artesanales de primera calidad. Huevos, verduras y productos frescos directo del campo a tu mesa, con todo el sabor natural de lo auténtico.',
-    logo: '/sponsors/Estrega.jpg',
-    instagram: 'https://www.instagram.com/laestrega',
-    location: 'Canelones, Uruguay',
+    id: 5,
+    name: 'Uruguay Lucha de Brazos',
+    category: 'Deporte y Competición',
+    description: 'Federación oficial de arm wrestling en Uruguay. Promoviendo el deporte de lucha de brazos con competencias nacionales e internacionales, fomentando la disciplina y el espíritu competitivo.',
+    logo: '/sponsors/uruguay-lucha-de-brazos.jpg',
+    instagram: 'https://www.instagram.com/uruguay_lucha_de_brazos/',
+    location: 'Uruguay',
     tier: 'gold',
   },
   {
-    id: 2,
-    name: 'Lavadero del Parque',
-    category: 'Servicios de Lavado',
-    description: 'Lavadero profesional con años de experiencia en el cuidado de vehículos. Servicio completo de lavado, encerado y detailing para mantener tu auto impecable.',
-    logo: '/sponsors/Lavadero.jpg',
-    instagram: 'https://www.instagram.com/lavadero_del_parque_',
-    location: 'Montevideo, Uruguay',
-    tier: 'gold',
+    id: 4,
+    name: 'Drako Gym',
+    category: 'Centro de Entrenamiento',
+    description: 'Gimnasio de alto rendimiento especializado en fuerza y acondicionamiento físico. Entrenadores certificados y equipamiento de última generación para alcanzar tus objetivos.',
+    logo: '/sponsors/Drako gym transparente.png',
+    instagram: 'https://www.instagram.com/gym_drako',
+    location: 'Canelones, Uruguay',
+    tier: 'platinum',
   },
   {
     id: 3,
@@ -41,14 +41,24 @@ const sponsors = [
     tier: 'silver',
   },
   {
-    id: 4,
-    name: 'Drako Gym',
-    category: 'Centro de Entrenamiento',
-    description: 'Gimnasio de alto rendimiento especializado en fuerza y acondicionamiento físico. Entrenadores certificados y equipamiento de última generación para alcanzar tus objetivos.',
-    logo: '/sponsors/Drako gym transparente.png',
-    instagram: 'https://www.instagram.com/gym_drako',
+    id: 2,
+    name: 'Lavadero del Parque',
+    category: 'Servicios de Lavado',
+    description: 'Lavadero profesional con años de experiencia en el cuidado de vehículos. Servicio completo de lavado, encerado y detailing para mantener tu auto impecable.',
+    logo: '/sponsors/Lavadero.jpg',
+    instagram: 'https://www.instagram.com/lavadero_del_parque_',
     location: 'Montevideo, Uruguay',
-    tier: 'platinum',
+    tier: 'gold',
+  },
+  {
+    id: 1,
+    name: 'La Estrega Rotisería',
+    category: 'Productos Artesanales',
+    description: 'Productos de granja artesanales de primera calidad. Huevos, verduras y productos frescos directo del campo a tu mesa, con todo el sabor natural de lo auténtico.',
+    logo: '/sponsors/Estrega.jpg',
+    instagram: 'https://www.instagram.com/laestrega',
+    location: 'Canelones, Uruguay',
+    tier: 'gold',
   },
 ]
 
@@ -238,12 +248,6 @@ export default function SponsorsPage() {
                   Solicitar Propuesta
                   <ExternalLink className="w-5 h-5" />
                 </Link>
-                <Link
-                  href="/pricing"
-                  className="px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all"
-                >
-                  Ver Planes
-                </Link>
               </div>
             </div>
           </motion.div>
@@ -256,7 +260,7 @@ export default function SponsorsPage() {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { number: '4+', label: 'Sponsors Activos' },
+              { number: '5+', label: 'Sponsors Activos' },
               { number: '15+', label: 'Proyectos Entregados' },
               { number: '100%', label: 'Satisfacción' },
               { number: '<24h', label: 'Tiempo Respuesta' },

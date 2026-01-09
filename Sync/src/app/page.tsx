@@ -10,21 +10,20 @@ import Navbar from '@/components/layout/Navbar'
 import Services from '@/components/sections/Services'
 import Impact from '@/components/sections/Impact'
 import Footer from '@/components/layout/Footer'
-import SyncSnake from '@/components/SyncSnake'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-20 md:py-32">
+        <div className="relative w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12">
           <div className="text-center max-w-4xl mx-auto">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex justify-center mb-2 md:mb-4"
+              className="flex justify-center -mb-12 sm:-mb-16 md:-mb-20 lg:-mb-24"
             >
               <Image
                 src="/Sync_azul-removebg-preview.png"
@@ -32,7 +31,7 @@ export default function Home() {
                 width={1400}
                 height={432}
                 priority
-                className="h-48 sm:h-64 md:h-72 lg:h-80 w-auto drop-shadow-[0_10px_35px_rgba(37,99,235,0.35)]"
+                className="h-64 sm:h-80 md:h-96 lg:h-[28rem] w-auto drop-shadow-[0_10px_35px_rgba(37,99,235,0.35)]"
               />
             </motion.div>
 
@@ -108,7 +107,6 @@ export default function Home() {
       <Services />
       <Impact />
       <Footer />
-      <SyncSnake />
     </main>
   )
 }

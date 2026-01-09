@@ -4,7 +4,6 @@
 import { useState } from 'react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import SyncSnake from '@/components/SyncSnake'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -148,7 +147,6 @@ export default function FAQPage() {
         crossOrigin="anonymous"
         async
       />
-      <SyncSnake />
     </main>
   )
 }

@@ -30,7 +30,7 @@ const steps = [
     icon: Layers,
     title: 'Desarrollo Ágil',
     duration: 'Sprints semanales',
-    description: 'Construimos tu proyecto en sprints de 7 días con demos cada semana. Ves el progreso real, das feedback temprano, y ajustamos sobre la marcha. No esperás hasta el final para ver tu sitio - lo ves crecer día a día.',
+    description: 'Construimos tu proyecto en sprints de 7 días con demos cada semana. Te ofrecemos un mockup interactivo para validar ideas mientras desarrollamos la página. Ves el progreso real, das feedback temprano, y ajustamos sobre la marcha. No esperás hasta el final para ver tu sitio - lo ves crecer día a día.',
     color: 'from-cyan-500 to-cyan-600',
   },
   {
@@ -173,12 +173,6 @@ export default function ProcesoPage() {
                   >
                     Agendar Discovery Call
                     <ArrowRight className="w-5 h-5" />
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all"
-                  >
-                    Ver Planes
                   </Link>
                 </div>
               </div>
