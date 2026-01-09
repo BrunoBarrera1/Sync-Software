@@ -1,16 +1,22 @@
 // src/app/layout.tsx
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Background from '@/components/Background'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#0c1220',
+}
+
 export const metadata: Metadata = {
   title: 'Sync Software - Desarrollo Web Premium en Uruguay',
   description: 'Creamos experiencias digitales que convierten visitantes en clientes. Desarrollo web profesional con React, Next.js y FastAPI.',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover',
-  themeColor: '#0c1220',
   keywords: ['desarrollo web', 'uruguay', 'react', 'nextjs', 'fastapi', 'landing pages'],
   authors: [{ name: 'Sync Software' }],
   appleWebApp: {

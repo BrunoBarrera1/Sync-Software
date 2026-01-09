@@ -12,7 +12,6 @@ export default function ContactoPage() {
     name: '',
     email: '',
     phone: '',
-    budget: '',
     projectType: '',
     message: '',
   })
@@ -192,40 +191,18 @@ export default function ContactoPage() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
-                        Teléfono
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
-                        placeholder="Teléfono de contacto"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-zinc-300 mb-2">
-                        Presupuesto estimado <span className="text-red-400">*</span>
-                      </label>
-                      <select
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-500 transition-colors"
-                      >
-                        <option value="">Selecciona un rango</option>
-                        <option value="$500 - $1,000">$500 - $1,000 (Landing Page)</option>
-                        <option value="$1,000 - $2,500">$1,000 - $2,500 (Sitio Corporativo)</option>
-                        <option value="$2,500 - $5,000">$2,500 - $5,000 (App Web)</option>
-                        <option value="$5,000+">$5,000+ (Enterprise)</option>
-                        <option value="No estoy seguro">No estoy seguro</option>
-                      </select>
-                    </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">
+                      Teléfono
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 transition-colors"
+                      placeholder="Teléfono de contacto"
+                    />
                   </div>
 
                   <div>
@@ -237,15 +214,15 @@ export default function ContactoPage() {
                       value={formData.projectType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-blue-500 transition-colors [&>option]:bg-zinc-900 [&>option]:text-white [&>option]:py-2 hover:bg-white/10 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27rgb(156,163,175)%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e')] bg-[length:1.25rem] bg-[right_0.75rem_center] bg-no-repeat pr-10"
                     >
-                      <option value="">Selecciona una opción</option>
-                      <option value="Landing Page">Landing Page</option>
-                      <option value="Sitio Corporativo">Sitio Corporativo</option>
-                      <option value="Aplicación Web">Aplicación Web</option>
-                      <option value="E-commerce">E-commerce</option>
-                      <option value="Mantenimiento">Mantenimiento/Actualización</option>
-                      <option value="Otro">Otro</option>
+                      <option value="" className="bg-zinc-900 text-white">Selecciona una opción</option>
+                      <option value="Landing Page" className="bg-zinc-900 text-white">Landing Page</option>
+                      <option value="Sitio Corporativo" className="bg-zinc-900 text-white">Sitio Corporativo</option>
+                      <option value="Aplicación Web" className="bg-zinc-900 text-white">Aplicación Web</option>
+                      <option value="E-commerce" className="bg-zinc-900 text-white">E-commerce</option>
+                      <option value="Mantenimiento" className="bg-zinc-900 text-white">Mantenimiento/Actualización</option>
+                      <option value="Otro" className="bg-zinc-900 text-white">Otro</option>
                     </select>
                   </div>
 
