@@ -44,14 +44,8 @@ export default function Navbar() {
       <nav className="absolute top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Mobile Menu Button - Left side */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Spacer for mobile */}
+            <div className="lg:hidden w-10" />
 
             {/* Desktop Navigation - Center */}
             <div className="hidden lg:flex items-center space-x-1 mx-auto">
@@ -76,8 +70,14 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Spacer for mobile to center the button */}
-            <div className="lg:hidden w-10" />
+            {/* Mobile Menu Button - Right side */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </nav>
@@ -100,14 +100,8 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col h-full p-6">
-            <div className="flex items-center justify-between mb-8">
+            <div className="mb-8">
               <span className="text-lg font-semibold text-white">Menú</span>
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-              >
-                <X size={24} className="text-white" />
-              </button>
             </div>
 
             <div className="flex flex-col space-y-2">

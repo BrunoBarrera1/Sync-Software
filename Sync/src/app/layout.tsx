@@ -28,13 +28,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
+    <html lang="es" className="min-h-screen">
       <body className={inter.className}>
-        <div className="relative min-h-screen text-[--text]">
-          <Background />
-          <div className="relative z-10">
-            {children}
-          </div>
+        <Background />
+        <div className="relative z-10 min-h-screen text-[--text]">
+          {children}
         </div>
       </body>
     </html>
