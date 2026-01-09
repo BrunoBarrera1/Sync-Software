@@ -107,7 +107,7 @@ export default function SyncSnake() {
             addMessage('¡Hola! Soy SyncSnake, tu asistente virtual. Puedo ayudarte con información sobre nuestros servicios, precios, tecnologías y más. ¿Qué te gustaría saber?', 'bot')
           }
         }}
-        className="fixed w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-lg shadow-blue-500/50 flex items-center justify-center hover:scale-110 transition-transform z-50"
+        className="fixed text-blue-500 hover:text-blue-400 transition-colors z-50"
         style={{
           right: '20px',
           bottom: 'calc(20px + env(safe-area-inset-bottom, 0px))',
@@ -115,7 +115,7 @@ export default function SyncSnake() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <MessageCircle className="w-7 h-7" />
+        <MessageCircle className="w-10 h-10" strokeWidth={1.5} />
         <AnimatePresence>
           {showBadge && (
             <motion.span

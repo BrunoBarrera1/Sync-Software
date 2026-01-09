@@ -95,7 +95,7 @@ export default function Navbar() {
           onClick={() => setIsMobileMenuOpen(false)}
         />
         <div
-          className={`absolute right-0 top-0 bottom-0 w-full max-w-sm bg-[#0F0F0F] border-l border-white/10 transition-transform ${
+          className={`absolute right-0 top-0 bottom-0 w-full max-w-sm bg-black/30 backdrop-blur-xl border-l border-white/20 transition-transform ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >

@@ -229,9 +229,9 @@ export default function PricingPage() {
       {/* Cart Button */}
       <button
         onClick={() => setIsCartOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-lg shadow-blue-500/50 flex items-center justify-center hover:scale-110 transition-transform z-40"
+        className="fixed bottom-6 right-6 text-blue-500 hover:text-blue-400 transition-all hover:scale-110 z-40"
       >
-        <ShoppingCart size={24} />
+        <ShoppingCart size={40} strokeWidth={1.5} />
         {cart.length > 0 && (
           <span className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
             {cart.length}
