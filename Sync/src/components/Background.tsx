@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface Particle {
   x: number
@@ -12,13 +12,14 @@ interface Particle {
   hue: number
 }
 
-const PARTICLE_COUNT = 50
+const PARTICLE_COUNT_DESKTOP = 50
+const PARTICLE_COUNT_MOBILE = 25
 const CONNECTION_DISTANCE = 150
 
-function createParticle(width: number, height: number): Particle {
+function createParticle(width: number, height: number, isInitial = false): Particle {
   return {
     x: Math.random() * width,
-    y: height + 10,
+    y: isInitial ? Math.random() * height : height + 10,
     size: Math.random() * 2 + 0.5,
     speedY: Math.random() * 1 + 0.5,
     speedX: Math.random() * 0.5 - 0.25,
@@ -29,20 +30,28 @@ function createParticle(width: number, height: number): Particle {
 
 export default function Background() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
-    if (!canvas) return
+    if (!canvas || !isMounted) return
 
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.getContext('2d', { alpha: true })
     if (!ctx) return
 
     let width = window.innerWidth
     let height = window.innerHeight
     let frame: number
+    const isMobile = width < 768
+    const particleCount = isMobile ? PARTICLE_COUNT_MOBILE : PARTICLE_COUNT_DESKTOP
 
-    const particles: Particle[] = Array.from({ length: PARTICLE_COUNT }, () =>
-      createParticle(width, height)
+    // Inicializar partículas distribuidas por toda la pantalla
+    const particles: Particle[] = Array.from({ length: particleCount }, () =>
+      createParticle(width, height, true)
     )
 
     const resize = () => {
@@ -112,10 +121,10 @@ export default function Background() {
       cancelAnimationFrame(frame)
       window.removeEventListener('resize', resize)
     }
-  }, [])
+  }, [isMounted])
 
   return (
-    <div className="background-container pointer-events-none">
+    <div className="background-container pointer-events-none" style={{ opacity: isMounted ? 1 : 0, transition: 'opacity 0.3s ease-in' }}>
       <div className="base-gradient" />
 
       <div className="orb orb-1" />
