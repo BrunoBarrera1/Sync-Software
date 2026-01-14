@@ -28,7 +28,14 @@ import {
   FaHeadset,
   FaEnvelope,
   FaChevronDown,
-  FaChevronUp
+  FaChevronUp,
+  FaSearch,
+  FaServer,
+  FaComments,
+  FaNetworkWired,
+  FaSync,
+  FaBell,
+  FaFilter
 } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
@@ -296,7 +303,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-12">
-            {/* Servicio 1 */}
+            {/* Servicio 1 - Landing Pages */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-cobalt-blue-500/20 border border-cobalt-blue-500/50 text-cobalt-blue-300 mb-6">
@@ -317,28 +324,133 @@ export default function Home() {
                 </ul>
               </div>
               <div className="order-1 lg:order-2 relative">
-                <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-cobalt-blue-500 rounded-full animate-ping opacity-20"></div>
-                  <div className="space-y-4">
-                    <div className="h-4 bg-gray-800 rounded-full w-3/4"></div>
-                    <div className="h-4 bg-gray-800 rounded-full w-1/2"></div>
-                    <div className="h-32 bg-gradient-to-r from-cobalt-blue-900/30 to-gray-900 rounded-xl"></div>
+                <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 hover:rotate-0 transition-transform duration-500">
+                  {/* SVG Architecture para Landing Pages */}
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <div className="relative w-full max-w-md mx-auto">
+                      {/* Dispositivos */}
+                      <div className="flex justify-center items-end space-x-8 mb-8">
+                        {/* Mobile */}
+                        <div className="flex flex-col items-center">
+                          <div className="w-16 h-28 border-2 border-cobalt-blue-500/50 rounded-lg bg-gray-900/50 flex items-center justify-center">
+                            <FaMobileAlt className="text-xl text-cobalt-blue-400" />
+                          </div>
+                          <div className="mt-2 text-xs text-gray-400">Mobile</div>
+                        </div>
+                        {/* Tablet */}
+                        <div className="flex flex-col items-center">
+                          <div className="w-24 h-32 border-2 border-cobalt-blue-500/50 rounded-lg bg-gray-900/50 flex items-center justify-center">
+                            <div className="text-center">
+                              <FaSearch className="text-lg text-cobalt-blue-400 mb-1" />
+                              <div className="text-xs text-cobalt-blue-300">SEO</div>
+                            </div>
+                          </div>
+                          <div className="mt-2 text-xs text-gray-400">Tablet</div>
+                        </div>
+                        {/* Desktop */}
+                        <div className="flex flex-col items-center">
+                          <div className="w-32 h-24 border-2 border-cobalt-blue-500/50 rounded-lg bg-gray-900/50 flex items-center justify-center">
+                            <FaChartLine className="text-2xl text-cobalt-blue-400" />
+                          </div>
+                          <div className="mt-2 text-xs text-gray-400">Desktop</div>
+                        </div>
+                      </div>
+                      
+                      {/* Líneas de conexión y servidor */}
+                      <div className="relative h-20">
+                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b from-cobalt-blue-500 to-transparent"></div>
+                        <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
+                          <div className="w-12 h-12 border-2 border-cobalt-blue-500/50 rounded-full bg-gray-900/80 flex items-center justify-center">
+                            <FaServer className="text-lg text-cobalt-blue-400" />
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-t from-green-500 to-transparent"></div>
+                      </div>
+                      
+                      {/* Analytics y conversión */}
+                      <div className="flex justify-center mt-4">
+                        <div className="flex items-center space-x-4">
+                          <div className="flex flex-col items-center">
+                            <div className="w-10 h-10 border-2 border-green-500/50 rounded-lg bg-gray-900/80 flex items-center justify-center">
+                              <FaCheck className="text-lg text-green-400" />
+                            </div>
+                            <div className="mt-1 text-xs text-gray-400">Conversión</div>
+                          </div>
+                          <div className="flex flex-col items-center">
+                            <div className="w-10 h-10 border-2 border-yellow-500/50 rounded-lg bg-gray-900/80 flex items-center justify-center">
+                              <FaFilter className="text-lg text-yellow-400" />
+                            </div>
+                            <div className="mt-1 text-xs text-gray-400">Analytics</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Servicio 2 */}
+            {/* Servicio 2 - Web Applications */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative">
-                <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <div className="absolute -top-4 -left-4 w-8 h-8 bg-cobalt-blue-500 rounded-full animate-ping opacity-20"></div>
-                  <div className="space-y-4">
-                    <div className="flex space-x-4">
-                      <div className="w-1/3 h-24 bg-gradient-to-b from-cobalt-blue-900/30 to-gray-900 rounded-xl"></div>
-                      <div className="w-2/3 h-24 bg-gradient-to-b from-gray-900 to-black rounded-xl"></div>
+                <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 hover:rotate-0 transition-transform duration-500">
+                  {/* SVG Architecture para Web Applications */}
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <div className="relative w-full max-w-md mx-auto">
+                      {/* Capas de arquitectura */}
+                      <div className="flex flex-col items-center space-y-4">
+                        {/* Frontend Layer */}
+                        <div className="w-48 px-6 py-3 border-2 border-cobalt-blue-500/50 rounded-xl bg-gray-900/80 flex items-center justify-between">
+                          <div className="flex items-center">
+                            <FaCode className="text-lg text-cobalt-blue-400 mr-2" />
+                            <span className="text-sm text-gray-300">Frontend</span>
+                          </div>
+                          <div className="text-xs text-cobalt-blue-300">React/Next.js</div>
+                        </div>
+                        
+                        {/* API Layer */}
+                        <div className="relative">
+                          <div className="w-40 px-6 py-3 border-2 border-purple-500/50 rounded-xl bg-gray-900/80 flex items-center justify-center">
+                            <div className="flex items-center">
+                              <FaNetworkWired className="text-lg text-purple-400 mr-2" />
+                              <span className="text-sm text-gray-300">API REST</span>
+                            </div>
+                          </div>
+                          <div className="absolute -right-12 top-1/2 transform -translate-y-1/2">
+                            <div className="text-xs text-purple-300 rotate-90">Fastify</div>
+                          </div>
+                        </div>
+                        
+                        {/* Backend Layer */}
+                        <div className="w-56 px-6 py-3 border-2 border-green-500/50 rounded-xl bg-gray-900/80 flex items-center justify-between">
+                          <div className="flex items-center">
+                            <FaServer className="text-lg text-green-400 mr-2" />
+                            <span className="text-sm text-gray-300">Backend</span>
+                          </div>
+                          <div className="text-xs text-green-300">TypeScript</div>
+                        </div>
+                        
+                        {/* Database Layer */}
+                        <div className="w-64 px-6 py-3 border-2 border-yellow-500/50 rounded-xl bg-gray-900/80 flex items-center justify-between">
+                          <div className="flex items-center">
+                            <FaDatabase className="text-lg text-yellow-400 mr-2" />
+                            <span className="text-sm text-gray-300">Database</span>
+                          </div>
+                          <div className="text-xs text-yellow-300">PostgreSQL</div>
+                        </div>
+                      </div>
+                      
+                      {/* Líneas de conexión */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 -top-4 w-0.5 h-4 bg-gradient-to-b from-cobalt-blue-500 to-transparent"></div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-4 w-0.5 h-4 bg-gradient-to-t from-yellow-500 to-transparent"></div>
+                      
+                      {/* Security Badge */}
+                      <div className="absolute -top-2 -right-2">
+                        <div className="w-10 h-10 border-2 border-green-500/50 rounded-full bg-gray-900 flex items-center justify-center text-green-400">
+                          <span className="text-xs font-bold">SEC</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="h-4 bg-gray-800 rounded-full w-full"></div>
                   </div>
                 </div>
               </div>
@@ -362,7 +474,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Servicio 3 */}
+            {/* Servicio 3 - Automatizaciones */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-cobalt-blue-500/20 border border-cobalt-blue-500/50 text-cobalt-blue-300 mb-6">
@@ -383,13 +495,59 @@ export default function Home() {
                 </ul>
               </div>
               <div className="order-1 lg:order-2 relative">
-                <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-cobalt-blue-500 rounded-full animate-ping opacity-20"></div>
-                  <div className="space-y-4">
-                    <div className="h-24 bg-gradient-to-r from-cobalt-blue-900/30 to-gray-900 rounded-xl flex items-center justify-center">
-                      <FaWhatsapp className="text-4xl text-green-500" />
+                <div className="relative bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-8 hover:rotate-0 transition-transform duration-500">
+                  {/* SVG Architecture para Automatizaciones */}
+                  <div className="flex flex-col items-center justify-center h-full">
+                    <div className="relative w-full max-w-md mx-auto">
+                      {/* Robot Central */}
+                      <div className="flex justify-center mb-6">
+                        <div className="relative">
+                          <div className="w-20 h-20 border-2 border-cobalt-blue-500/50 rounded-full bg-gray-900/80 flex items-center justify-center">
+                            <FaRobot className="text-3xl text-cobalt-blue-400" />
+                          </div>
+                          {/* Anillos concéntricos */}
+                          <div className="absolute inset-0 border-2 border-green-500/30 rounded-full animate-pulse-slow"></div>
+                          <div className="absolute inset-4 border-2 border-purple-500/30 rounded-full animate-pulse-slow delay-300"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Integraciones alrededor */}
+                      <div className="grid grid-cols-2 gap-4">
+                        {/* WhatsApp */}
+                        <div className="flex flex-col items-center p-3 border-2 border-green-500/30 rounded-xl bg-gray-900/60">
+                          <FaWhatsapp className="text-2xl text-green-400 mb-1" />
+                          <div className="text-xs text-gray-300">WhatsApp</div>
+                          <div className="text-[10px] text-green-300">Business API</div>
+                        </div>
+                        
+                        {/* IA Conversacional */}
+                        <div className="flex flex-col items-center p-3 border-2 border-purple-500/30 rounded-xl bg-gray-900/60">
+                          <FaComments className="text-2xl text-purple-400 mb-1" />
+                          <div className="text-xs text-gray-300">IA Chat</div>
+                          <div className="text-[10px] text-purple-300">Conversacional</div>
+                        </div>
+                        
+                        {/* Automatización */}
+                        <div className="flex flex-col items-center p-3 border-2 border-yellow-500/30 rounded-xl bg-gray-900/60">
+                          <FaSync className="text-2xl text-yellow-400 mb-1" />
+                          <div className="text-xs text-gray-300">Workflows</div>
+                          <div className="text-[10px] text-yellow-300">Automatizados</div>
+                        </div>
+                        
+                        {/* Notificaciones */}
+                        <div className="flex flex-col items-center p-3 border-2 border-red-500/30 rounded-xl bg-gray-900/60">
+                          <FaBell className="text-2xl text-red-400 mb-1" />
+                          <div className="text-xs text-gray-300">Alerts</div>
+                          <div className="text-[10px] text-red-300">Inteligentes</div>
+                        </div>
+                      </div>
+                      
+                      {/* Flujo de datos */}
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32">
+                        <div className="absolute inset-0 border-t-2 border-r-2 border-cobalt-blue-500/20 rounded-full"></div>
+                        <div className="absolute inset-4 border-b-2 border-l-2 border-green-500/20 rounded-full"></div>
+                      </div>
                     </div>
-                    <div className="h-4 bg-gray-800 rounded-full w-2/3"></div>
                   </div>
                 </div>
               </div>
